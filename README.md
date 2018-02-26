@@ -11,16 +11,23 @@ stellar-ssid-onoff is a small tool that toggles the operational status of a give
 ```
 $ python stellar-ssid-onoff.py 
 
-TODO: ADD OUTPUT
+Stellar SSID on/off - a simple script to toggle the operational status of Stellar Wireless SSIDs
+Written by Benny Eggerstedt in 2018
+This is free software not provided/shipped by Alcatel-Lucent Enterprise. Use it at your own risk!
+
+[+] Reading settings.json file
+[*] Attempting to connect to OmniVista server @ https://omnivista.home
+[*] Connection to omnivista.home successful!
+[*] Found instanceID 59ab1cb7e4b010f83b3d47f0 for AP group Home
+[*] Found deviceId 5a7d02b6e4b0582ec054a882 for SSID dynpsk
+[+] Toggled the operational status of SSID dynpsk to disabled
 
 ```
 
 ## Demo Video
-TODO: ADD VIDEOLINK
-[![Demo Video](https://img.youtube.com/vi/cx0n13rECW0/0.jpg)](https://www.youtube.com/watch?v=cx0n13rECW0)
+[![Demo Video](https://img.youtube.com/vi/VXllxh8jaGU/0.jpg)](https://www.youtube.com/watch?v=VXllxh8jaGU)
 
 ## Usage
-TODO: UPDATE
 Edit the **settings.json.template** and save it as **settings.json**
 ```
 {
@@ -29,15 +36,6 @@ Edit the **settings.json.template** and save it as **settings.json**
         "ov_password": "switch",			# Password
         "validate_https_certificate": "yes",		# Validate the HTTPS certificate?
         "ap_group": "ap-group-name-case-sensitive",	# AP-Group of APs that you want to update (case-sensitive!)
-        "ssid": "ssid-name",				# Name of the SSID on which you want to update the PSK
-        "psk_length": 12				# The length of the PSK to generate
-        "send_psk_via_mail": "yes",			# If you want to send a mail with the PSK/QR Code
-        "email_from": "FROMaddress@mailprovider.com",	# mailFrom
-        "smtp_server": "smtp.gmail.com",		# SMTP server
-        "smtp_auth": "yes",				# Please specifiy if you need authentication
-        "smtp_port": 587,				# If "auth" is set, we currently always do TLS
-        "smtp_password": "passwordforsmtp",		# SMTP password
-        "language": "de",				# Language for the mail (de, en) 
-        "email_to": "TOaddress@mailprovider.com"	# mailTo
+        "ssid": "ssid-name"				# Name of the SSID that you want to enable/disable
 }
 ```
